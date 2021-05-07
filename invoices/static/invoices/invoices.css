@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.th-blue-color {
+    color: #269abc !important;
+}
+
+.font-weight-bold {
+    font-weight: bold !important;
+}
+
+.container {
+    margin: 0 100px;
+}
+
+.text-underline {
+    text-decoration: underline !important;
+}
+
+.divider {
+    border-bottom: #dddddd solid 1px;
+}
+
+.header-component {
+    text-align: center;
+    padding: 1rem;
+}
+
+.margin-top-0 {
+    margin-top: 0 !important;
+}
+
+.top-margin {
+    margin-top: 25px !important;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+.signed-area {
+    display: flex;
+    align-items: center;
+}
+
+.signed-area span {
+    padding-right: .25rem;
+    padding-left: .25rem;
+}
+
+.vehicle-area span {
+    font-weight: bold !important;
+    padding-right: .15rem;
+    padding-left: .15rem;
+}
+
+.vehicle-area .person-name {
+    color: green !important;
+}
+
+.vehicle-area .heading {
+    color: red !important;
+}
+
+.car-image-box {
+    border: 1px solid #dddddd;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.footer-text {
+    position: static;
+    width: 100%;
+    bottom: 0 !important;
+}

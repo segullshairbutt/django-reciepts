@@ -1,0 +1,340 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+    {% load static %}
+{#    <link  rel="stylesheet" type="text/css" href="{% static 'invoices/invoices.css' %}">#}
+    <style>
+    * {
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.th-blue-color {
+    color: #269abc !important;
+}
+
+.font-weight-bold {
+    font-weight: bold !important;
+}
+
+.container {
+    margin: 0 100px;
+}
+
+.text-underline {
+    text-decoration: underline !important;
+}
+
+.divider {
+    border-bottom: #dddddd solid 1px;
+}
+
+.header-component {
+    text-align: center;
+    padding: 1rem;
+}
+
+.margin-top-0 {
+    margin-top: 0 !important;
+}
+
+.top-margin {
+    margin-top: 25px !important;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+.signed-area {
+    display: flex;
+    align-items: center;
+}
+
+.signed-area span {
+    padding-right: .25rem;
+    padding-left: .25rem;
+}
+
+.vehicle-area span {
+    font-weight: bold !important;
+    padding-right: .15rem;
+    padding-left: .15rem;
+}
+
+.vehicle-area .person-name {
+    color: green !important;
+}
+
+.vehicle-area .heading {
+    color: red !important;
+}
+
+.car-image-box {
+    border: 1px solid #dddddd;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.footer-text {
+    position: static;
+    width: 100%;
+    bottom: 0 !important;
+}
+
+</style>
+
+    <div class="container">
+        <header class="header-component divider">
+            <img src="{% static 'invoices/assets/logo.png' %}" alt="logo">
+            <h3 class="text-underline margin-top-0">VEHICLE ASSESSMENT REPORT</h3>
+        </header>
+        <section class="row">
+            <article class="column">
+                <div>
+                    <h4> Insurance Details </h4>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="th-blue-color">INSURED</th>
+                            <td>Capt. Hesbon Marute Wasike</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">INSURER</th>
+                            <td>GEMINIA INSURANCE CO. LTD</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">POLICY/CLAIM NO</th>
+                            <td>PC/01/1666114/1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">COVER FROM</th>
+                            <td>TBA</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">INSTRUCTOR</th>
+                            <td>Onesmus Mutahi</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">SUM INSURED</th>
+                            <td>Ksh. 3,810,000.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">VEHICLE SITUATION</th>
+                            <td>Silverano</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">PRE ACCIDENT</th>
+                            <td>Ksh.3,430,000.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">SALVAGE VALUE</th>
+                            <td>N/A</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div>
+                    <h4> Vehicle Registration </h4>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="th-blue-color">REGISTRATION NO</th>
+                            <td>KCH 644L</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">YEAR OF MFR</th>
+                            <td>2012</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">CHASSIS NO</th>
+                            <td>MNBUMFO50CW129495</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">ENGINE NO</th>
+                            <td>TBA</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">RATING</th>
+                            <td>TBA</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">MAKE & TYPE</th>
+                            <td>FORD RANGER D/CABIN</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">MODEL</th>
+                            <td>TBA</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">MILEAGE</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">COLOR</th>
+                            <td>White</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="top-margin">
+                    <p class="vehicle-area">
+                        <span class="heading">VEHICLE ASSESSED BY</span>
+                        <span class="person-name">Stephen Kangethe</span>
+                    </p>
+                    <img src="{% static 'invoices/assets/logo.png' %}" alt="car-img" class="car-image-box">
+                    <p class="vehicle-area">
+                        <span class="heading">NB:</span>
+                        <span class="th-blue-color">The accident is consistent with a frontal extensive impact in the
+                            direction of front to rear.</span>
+                    </p>
+                </div>
+
+            </article>
+            <article class="column">
+                <div>
+                    <h4> Spare Parts & Repair Summary </h4>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="th-blue-color">TOTAL COST OF (46) SPARES</th>
+                            <td>Ksh.1,383,884.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">TOTAL COST OF (5) REPAIRS</th>
+                            <td>Ksh.93,000.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">SUB TOTAL</th>
+                            <td>Ksh.1,476,884.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">16% V.A.T</th>
+                            <td class="font-weight-bold">Ksh.236,301.44</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">GRAND TOTAL</th>
+                            <td class="font-weight-bold">Ksh.1,713,185.44</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <h4> Repair Status </h4>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="th-blue-color">REPAIRS</th>
+                            <td>Not authorised</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">EST TIME OF REPAIRS</th>
+                            <td>15 Working days</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">CONTACT PERSON</th>
+                            <td>none</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">TEL NO</th>
+                            <td>none</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">EMAIL</th>
+                            <td>none</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="top-margin">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="th-blue-color">Condition of Vehicle</th>
+                            <td>In accident state</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">Pre Accident Condition</th>
+                            <td>Good</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">Brakes</th>
+                            <td>Serviceable</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">Steering</th>
+                            <td>Serviceable</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th-blue-color">Delivery Mode</th>
+                            <td>Towed</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <h4> TYRE (% TREAD DEPTH) </h4>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="th-blue-color">LHR</th>
+                            <td>60%</td>
+
+                            <th scope="row" class="th-blue-color">RHR</th>
+                            <td>60%</td>
+
+                            <th scope="row" class="th-blue-color">LHF</th>
+                            <td>60%</td>
+
+                            <th scope="row" class="th-blue-color">RHF</th>
+                            <td>60%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="top-margin">
+                    <p class="signed-area">
+                        <span>Signed</span>
+                        <span><img src="{% static 'invoices/assets/sign.png' %}" width="150" alt="signed-by"></span>
+                        <span>Date:</span>
+                        <span class="text-underline">6th September 2019</span>
+                    </p>
+                    <p>FOR AND ON BEHALF OF ELITE VALUERS & ASSESSORS LTD</p>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+            <p class="footer-text">
+                Elite Automobile Valuers & Assessors - KCH 644L - Regulated by IRA
+            </p>
+        </footer>
+    </div>
+
+{% endblock %}
