@@ -62,8 +62,8 @@ def generate_pdf(request):
 
     # Rendered
     html_string = render_to_string('invoices/invoice.html')
-    html = HTML(string=html_string)
-    css = CSS(string="@page {size: Letter; margin: 2.5cm;}")
+    html = HTML(string=html_string,base_url=request.build_absolute_uri())
+    css = CSS(string="@page {size: Letter; margin: 0cm;}")
     result = html.write_pdf(stylesheets=[css])
 
     # Creating http response
@@ -71,7 +71,7 @@ def generate_pdf(request):
     response['Content-Disposition'] = 'inline; filename=temp.pdf'
     response['Content-Transfer-Encoding'] = 'binary'
 
-    with tempfile.NamedTemporaryFile(delete=True) as output:
+    with tempfile.NamedTemporaryFile(delete=False) as output:
         output.write(result)
         output.flush()
         output = open(output.name, 'rb')

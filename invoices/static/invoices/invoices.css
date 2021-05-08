@@ -2,6 +2,47 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.invoice {
+    color: #222;
+    padding: 3rem 2rem 4rem 3rem;
+    /* width: 8.27in; */
+    margin: .5rem auto;
+    position: relative;
+}
+
+.invoice h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.invoice h3 {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.invoice-logo {
+    text-align: center;
+    max-width: 50%;
+}
+
+.subtitle-text {
+    font-size: 80%;
+    text-decoration: underline;
+    margin: 0;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -9,8 +50,9 @@ table {
 
 th,
 td {
-    border: 1px solid #dddddd;
-    padding: 10px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 75%;
     text-align: left;
 }
 
@@ -18,43 +60,83 @@ td {
     color: #269abc !important;
 }
 
+.divider {
+    border-bottom: #ddd solid 1px;
+    margin-bottom: 1rem;
+}
+
+.invoice-grid {
+    margin: 0 0 1rem 0;
+}
+
+.invoice-grid>div {
+    padding-right: 1rem;
+}
+
+.invoice-grid pre {
+    margin: 0;
+    font-family: inherit;
+}
+
+.invoice-module {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    min-height: 100px;
+}
+
+.invoice-module img {
+    width: 100% !important;
+}
+
+.amount-due-amount,
+.due-date-date {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.paid-line {
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+}
+
+.footer-line {
+    padding: 1rem 0 1rem 0;
+    position: absolute;
+    bottom: 5px;
+    font-size: 75%;
+}
+
+.paid-line img {
+    display: block;
+    margin: 0 auto 1.5rem;
+    object-fit: contain;
+}
+
+.grid [class^="grid-"] {
+    float: left;
+}
+
+.grid .grid-1-2 {
+    width: 50%;
+}
+
+.group:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .font-weight-bold {
     font-weight: bold !important;
 }
 
-.container {
-    margin: 0 100px;
-}
 
-.text-underline {
-    text-decoration: underline !important;
-}
-
-.divider {
-    border-bottom: #dddddd solid 1px;
-}
-
-.header-component {
-    text-align: center;
-    padding: 1rem;
+.margin-top {
+    margin-top: 1rem !important;
 }
 
 .margin-top-0 {
     margin-top: 0 !important;
-}
-
-.top-margin {
-    margin-top: 25px !important;
-}
-
-.row {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.column {
-    flex: 50%;
-    padding: 10px;
 }
 
 .signed-area {
@@ -67,30 +149,18 @@ td {
     padding-left: .25rem;
 }
 
-.vehicle-area span {
-    font-weight: bold !important;
-    padding-right: .15rem;
-    padding-left: .15rem;
+.sign-image {
+    width: 75px !important;
 }
 
-.vehicle-area .person-name {
-    color: green !important;
+.small-font {
+    font-size: 75% !important;
 }
 
-.vehicle-area .heading {
+.text-red {
     color: red !important;
 }
 
-.car-image-box {
-    border: 1px solid #dddddd;
-    padding: 1rem;
-    width: 100%;
-    max-width: 100%;
-}
-
-
-.footer-text {
-    position: static;
-    width: 100%;
-    bottom: 0 !important;
+.text-green {
+    color: green !important;
 }
